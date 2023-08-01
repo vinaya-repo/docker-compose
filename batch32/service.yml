@@ -1,18 +1,18 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: docker-compose-deployment
+  name: docker-compose2-deployment
   namespace: mynamespace
 spec:
   selector:
-    app: docker-compose
+    app: docker-compose2
   type: LoadBalancer
   sessionAffinity: None
   sessionAffinityConfig:
     clientIP:
       timeoutSeconds: 10800
   ports:
-  - name: docker-compose
+  - name: docker-compose2
     protocol: TCP
     port: 80
     targetPort: 5000
